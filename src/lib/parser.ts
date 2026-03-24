@@ -1,5 +1,5 @@
 import type { Material } from "@/types/material";
-import { FIELDS, BOOLEAN_FIELDS, type Field, type Separator } from "@/lib/fields";
+import { FIELDS, BOOLEAN_FIELDS, ARRAY_FIELDS, type Field, type Separator } from "@/lib/fields";
 
 export type { Material };
 
@@ -67,6 +67,8 @@ export function parseCSV(
           if (val) {
             if (BOOLEAN_FIELDS.includes(f)) {
               (obj as Record<string, boolean>)[f] = val.toUpperCase() === "TRUE";
+            } else if (ARRAY_FIELDS.includes(f)) {
+              (obj as Record<string, string[]>)[f] = val.split(",").map((s) => s.trim()).filter(Boolean);
             } else {
               (obj as Record<string, string>)[f] = val;
             }
@@ -96,6 +98,7 @@ export function toTypeScript(items: Partial<Material>[]): string {
         const val = (o as Record<string, unknown>)[f];
         if (val === undefined || val === null || val === "") return null;
         if (typeof val === "boolean") return `    ${f}: ${val}`;
+        if (Array.isArray(val)) return `    ${f}: [${val.map((v: string) => `"${v}"`).join(", ")}]`;
         return `    ${f}: "${val}"`;
       }).filter(Boolean);
       return "  {\n" + lines.join(",\n") + "\n  }";
