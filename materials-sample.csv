@@ -1,4 +1,4 @@
-id,title,description,link,requiresCode,accessCode,category,type,roles
+id,title,description,link,requiresCode,accessCode,category,type,role
 mat-001,Introduction to Linear Algebra,A beginner-friendly walkthrough of vectors and matrices.,https://www.youtube.com/watch?v=fNk_zzaMoSs,FALSE,,kick_off,article,"UX, PM"
 mat-002,Calculus — Limits and Derivatives,Core concepts of differential calculus explained step by step.,https://www.youtube.com/watch?v=WUvTyaaNkzM,FALSE,,kick_off,article,"UX, PM"
 mat-003,Probability & Statistics — Full Course,Comprehensive lecture series covering descriptive and inferential statistics.,https://www.youtube.com/watch?v=xxpc-HPKN28,TRUE,STAT2024,user_research,notebook_lm,"UX, PM"

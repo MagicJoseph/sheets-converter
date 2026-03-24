@@ -2,7 +2,7 @@ import { Textarea, Label, Select } from "@/components/ui/primitives";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import type { Separator } from "@/lib/fields";
 
-const PLACEHOLDER = `id,title,description,link,requiresCode,accessCode,category,type,roles
+const PLACEHOLDER = `id,title,description,link,requiresCode,accessCode,category,type,role
 mat-001,Introduction to Linear Algebra,A beginner-friendly walkthrough of vectors and matrices.,https://www.youtube.com/watch?v=fNk_zzaMoSs,FALSE,,kick_off,article,"UX, PM"
 mat-002,Probability & Statistics,Comprehensive lecture series.,https://www.youtube.com/watch?v=xxpc-HPKN28,TRUE,STAT2024,user_research,notebook_lm,"UX, PM"`;
 

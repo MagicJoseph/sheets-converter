@@ -23,5 +23,5 @@ export interface Material {
   accessCode?: string;
   category: MaterialCategory;
   type: MaterialType;
-  roles: string[];
+  role: string[];
 }
