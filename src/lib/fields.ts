@@ -7,7 +7,7 @@ export const FIELDS = [
   "accessCode",
   "category",
   "type",
-  "role",
+  "roles",
 ] as const;
 
 export type Field = (typeof FIELDS)[number];
@@ -16,7 +16,7 @@ export const REQUIRED_FIELDS: Field[] = ["title", "link"];
 
 export const BOOLEAN_FIELDS: Field[] = ["requiresCode"];
 
-export const ARRAY_FIELDS: Field[] = ["role"];
+export const ARRAY_FIELDS: Field[] = ["roles"];
 
 export type Separator = "," | ";" | "\t";
 
